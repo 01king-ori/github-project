@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Users } from '../../models/users';
+import { HttpClient } from '@angular/common/http';
+import { SearchGitService } from '../../services/search-git.service';
+import { Repositories } from 'src/app/models/repositories'; 
 
 @Component({
   selector: 'app-my-profile',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyProfileComponent implements OnInit {
 
-  constructor() { }
+  repos:Repositories[];
+  user:Users;
 
-  ngOnInit(): void {
+  constructor(private searchGitService: SearchGitService, private http:HttpClient) {}
+
+  ngOnInit(){
+    this.searchGitService.userInfoRequest("Kingori")
+    this.user = this.searchGitService.user
+    this.searchGitService.userRepoRequest("Kingori")
+    this.repos =this.searchGitService.repos
   }
-
 }
