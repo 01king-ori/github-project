@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { RepoResultComponent } from './components/repo-result/repo-result.component';
 import { SearchResultComponent } from './components/search-result/search-result.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { DaysAgoPipe } from './pipes/days-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
     PageNotFoundComponent,
     RepoResultComponent,
     SearchResultComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    DaysAgoPipe
   ],
   imports: [
     BrowserModule,
