@@ -2,8 +2,15 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { APP_ID } from "@angular/core";
+
 export const environment = {
   production: false
+  API key:number
+  giturl: 537d1d00d900d5b9f015456ae2e615bf753e916a 
+
+
+
 };
 
 /*
