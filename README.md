@@ -11,7 +11,7 @@ Vincent King'ori Mwangi.
 ## challenges encountered
 I have encountered many challenges developing especially when deploying it to github but I have been able to fix some issues but there are some issues that I have been unable to fix for example the background images are showing on my local server but are not showing on the github page
 # contact information
-You can email me @kingorimwangi01@gmail.com
+You can email me @kingorimwangi01@gmail.com.
 ## technologies used
   I have used,angular, html,css and javascript on this project
 
