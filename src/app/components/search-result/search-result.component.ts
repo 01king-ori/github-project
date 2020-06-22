@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Users } from '../../models/users';
+import { Users } from '../../classes/users';
 import { SearchGitService } from '../../services/search-git.service';
-import { Repositories } from 'src/app/models/repositories'; 
+import { Repositories } from '../../classes/repositories'; 
 import { ActivatedRoute, Router } from '@angular/router';
-import { RepositoriesByName } from '../../models/repositories-by-name';
+import { RepositoriesByName } from '../../classes/repositories-by-name';
 
 @Component({
   selector: 'app-search',

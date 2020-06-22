@@ -40,7 +40,7 @@ export class SearchGitService {
       email: string;
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<userApiResponse>(`${environment.gitUrl}${username}?client_id=${environment.API_Key}`).toPromise().then(response=>{
+      this.http.get<userApiResponse>(`${environment.giturl}${username}?client_id=${environment.API}`).toPromise().then(response=>{
         this.user.name =  response.name
         this.user.login = response.login
         this.user.bio =  response.bio
@@ -74,7 +74,7 @@ export class SearchGitService {
       for(let i=0; i<arrayLength; i++){ //removing initial values from repos array before pushing to the array
         this.repos.pop()
       }
-      this.http.get<repoApiResponse>(`${environment.gitUrl}${username}/repos?client_id=${environment.API_Key}`).toPromise().then(response=>{
+      this.http.get<repoApiResponse>(`${environment.giturl}${username}/repos?client_id=${environment.API}`).toPromise().then(response=>{
         for(let i=0; i<this.user.public_repos; i++){
           let repo = new Repositories("","","","",0,new Date());
         repo.name =  response[i]["name"]

@@ -1,7 +1,7 @@
 mport { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { SearchResultComponent} from './components/searchResult/searchResult.component';
+import { SearchResultComponent} from '../app/components/search-result/search-result.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component'; 
 import { RepoResultComponent } from './components/repo-result/repo-result.component';

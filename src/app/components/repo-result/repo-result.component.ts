@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchGitService } from '../../services/search-git.service';
-import { RepositoriesByName } from '../../models/repositories-by-name';
+import { RepositoriesByName } from '../../classes/repositories-by-name';
 import { ActivatedRoute } from '@angular/router'; 
-import { NumberOfRepositories } from '../../models/number-of-repositories'; 
+import { NumberOfRepositories } from '../../classes/number-of-repositories'; 
 
 @Component({
   selector: 'app-repo-result',

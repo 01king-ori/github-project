@@ -14,4 +14,3 @@ export class PageNotFoundComponent implements OnInit {
 
 }
    
-© 2020 GitHub, Inc.

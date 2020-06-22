@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Users } from '../../models/users';
+import { Users } from '../../classes/users';
 import { HttpClient } from '@angular/common/http';
 import { SearchGitService } from '../../services/search-git.service';
-import { Repositories } from 'src/app/models/repositories'; 
+import { Repositories } from '../../classes/repositories'; 
 
 @Component({
   selector: 'app-my-profile',

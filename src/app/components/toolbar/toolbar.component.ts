@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchGitService } from '../../services/search-git.service';
-import { Users } from '../../models/users';
-import { Repositories } from 'src/app/models/repositories'; 
+import { Users } from '../../classes/users';
+import { Repositories } from '../../classes/repositories'; 
 import { Router } from '@angular/router';
-import { SearchResultComponent} from '../searchResult/searchResult.component';
-import { RepositoriesByName } from '../../models/repositories-by-name';
-import { NumberOfRepositories } from '../../models/number-of-repositories';
+import { SearchResultComponent} from '../../components/search-result/search-result.component';
+import { RepositoriesByName } from '../../classes/repositories-by-name';
+import { NumberOfRepositories } from '../../classes/number-of-repositories';
 
 @Component({
   selector: 'app-toolbar',
