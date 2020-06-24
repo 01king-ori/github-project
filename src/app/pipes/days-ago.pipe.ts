@@ -1,19 +1,24 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'daysAgo'
+  name: 'dateCount'
 })
-export class DaysAgoPipe implements PipeTransform {
+export class DateCountPipe implements PipeTransform {
 
-  transform(value: any): any {
-    let firstDate: Date = new Date(value)
-    let firstDateWithNoTime:any  = new Date(firstDate.getFullYear(),firstDate.getMonth(),firstDate.getDate());
-    let currentDate: Date = new Date();
-    let todayWithNoTime:any = new Date(currentDate.getFullYear(),currentDate.getMonth(),currentDate.getDate())
-    let timeDifferenceSeconds = Math.round(Math.abs((todayWithNoTime - firstDateWithNoTime)/ 1000));
-    let days = Math.round(Math.abs((timeDifferenceSeconds) / 86400))
+  transform(value: any): number {
+    const today: Date = new Date(); // get current date and time
+    const todayWithNoTime: any = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    let dateDifference = Math.abs(value - todayWithNoTime );// returns value in milliseconds
+    const secondsInADay = 86400; // 60 seconds*60 minutes in an hour *24 hours
 
-    return days;
+    let dateDifferenceSeconds = dateDifference * 0.001; // converts to seconds
+
+    let dateCounter = dateDifferenceSeconds / secondsInADay;
+
+    if (dateCounter >= 1 && value > todayWithNoTime) {
+        return dateCounter;
+    } else {
+        return 0;
+    }
   }
-
 }

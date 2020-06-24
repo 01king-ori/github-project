@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class ="jumbotron">
+  <div class="row">
+      <form (ngSubmit)="searchFor(searchForm)" #searchForm="ngForm">
+          <div class="form-group">
+        <label for="name">Search</label>
+        <input type="text" required class="form-control" name="find" id="name"[(ngModel)]= "searchInfo.find"  #find='ngModel'>
+      </div>
+      <button type="submit" class="btn btn-success btn-lg">Search</button>
+    </form>
+  </div>
+</div>
+</div>
+<br>

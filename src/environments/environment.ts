@@ -5,12 +5,8 @@
 import { APP_ID } from "@angular/core";
 
 export const environment = {
-  production: false
-  API key:number
-  giturl: 537d1d00d900d5b9f015456ae2e615bf753e916a 
-
-
-
+  production: false,
+  myApi:`71c55539acb54b8e9c1b5ccfaa75ddf795e20e98`,  
 };
 
 /*

@@ -1,10 +1,10 @@
-mport { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { SearchResultComponent} from '../app/components/search-result/search-result.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { MyProfileComponent } from './components/my-profile/my-profile.component'; 
-import { RepoResultComponent } from './components/repo-result/repo-result.component';
+import { HomeComponent } from './home/home.component';
+import { SearchResultComponent} from './../app/search-result/search-result.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MyProfileComponent } from './my-profile/my-profile.component'; 
+import { RepoResultComponent } from './repo-result/repo-result.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},

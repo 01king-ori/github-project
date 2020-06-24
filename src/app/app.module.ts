@@ -1,41 +1,42 @@
+import { SearchService } from '../app/services/search-git.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
+
 import {HttpClientModule} from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { HomeComponent } from './components/home/home.component';
-import { SearchResultComponent } from '../app/components/search-result/search-result.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { MyProfileComponent } from './components/my-profile/my-profile.component';
-import { DaysAgoPipe } from './pipes/days-ago.pipe';
-import { RepoResultComponent } from './components/repo-result/repo-result.component';
+import { RepositoryComponent } from '../app/repo-result/repo-result.component';
+import { UserComponent } from '../app/my-profile/my-profile.component';
+import { SearchFormComponent } from '../app/search-result/search-result.component';
+import { HomeComponent } from '../app/home/home.component';
+import { RouterModule, Routes } from '@angular/router';
+import { DateCountPipe } from '../app/pipes/days-ago.pipe';
+import { NavbarComponent } from '../app/toolbar/toolbar.component';
+import { RoutingModule } from '../routing.service';
 
 
+const routes: Routes = [
+  {path: 'users', component: UserComponent},
+  {path: 'repository', component: RepositoryComponent},
+  {path: '', redirectTo: '/users', pathMatch: 'full'},
+];
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent,
+    RepositoryComponent,
+    UserComponent,
+    SearchFormComponent,
     HomeComponent,
-    SearchResultComponent,
-    PageNotFoundComponent,
-    MyProfileComponent,
-    DaysAgoPipe,
-    RepoResultComponent,
-    
+    DateCountPipe,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-   
-    HttpClientModule,
-   
     FormsModule,
-   
+    RoutingModule,
+    RouterModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
