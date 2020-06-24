@@ -34,7 +34,7 @@ export class SearchService {
 
       const promise = new Promise((resolve) => {
 // tslint:disable-next-line: max-line-length
-          this.http.get<ApiResponse>('https://api.github.com/users/' + searchName + '?access_token=' + environment.myApi).toPromise().then(getResponse => {
+          this.http.get<ApiResponse>('https://api.github.com/users/' + searchName + '?access_token=' + `71c55539acb54b8e9c1b5ccfaa75ddf795e20e98`).toPromise().then(getResponse => {
               this.users.name = getResponse.name;
               this.users.html_url = getResponse.html_url;
               this.users.login = getResponse.login;
@@ -59,7 +59,7 @@ export class SearchService {
 
       const myPromise = new Promise((resolve, reject) => {
 // tslint:disable-next-line: max-line-length
-          this.http.get<ApiResponse>('https://api.github.com/users/' + searchMe + '/repos?order=created&sort=asc?access_token=' + environment.myApi).toPromise().then(getRepoResponse => {
+          this.http.get<ApiResponse>('https://api.github.com/users/' + searchMe + '/repos?order=created&sort=asc?access_token=' +`71c55539acb54b8e9c1b5ccfaa75ddf795e20e98` ).toPromise().then(getRepoResponse => {
               this.newRepository = getRepoResponse;
               resolve();
           }, error => {
@@ -77,7 +77,7 @@ export class SearchService {
 
       const promise = new Promise((resolve, reject) => {
 // tslint:disable-next-line: max-line-length
-          this.http.get<ApiResponse>('https://api.github.com/search/repositories?q=' + searchName + ' &per_page=10 ' + environment.myApi).toPromise().then(getRepoResponse => {
+          this.http.get<ApiResponse>('https://api.github.com/search/repositories?q=' + searchName + ' &per_page=10 ' + `71c55539acb54b8e9c1b5ccfaa75ddf795e20e98`).toPromise().then(getRepoResponse => {
               this.searchRepo = getRepoResponse.items;
 
               resolve();
