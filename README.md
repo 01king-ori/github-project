@@ -4,12 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 # description
-This is a simple website where one can search github repos and users.You can check it out at https://01king-ori.github.io/GithubProject/
+This is a simple website where one can search github repos and users.One simply inputs the user or repository one wants to search for and the site searches for you.You can check it out at https://01king-ori.github.io/github-project/
 # author
 Vincent King'ori Mwangi.
 
 ## challenges encountered
-I have encountered many challenges developing especially when deploying it to github but I have been able to fix some issues but there are some issues that I have been unable to fix for example the background images are showing on my local server but are not showing on the github page
+I have encountered many challenges developing especially when deploying it to github but I have been able to fix some issues 
 # contact information
 You can email me @kingorimwangi01@gmail.com.
 ## technologies used
